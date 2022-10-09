@@ -1,0 +1,53 @@
+# import pprint
+myCat = {
+    'size': 'fat',
+    'color': 'gray',
+    'disposition' : 'loud'
+}
+# display value of key size
+print(myCat['size'])
+#get all key of the dic myCat
+keysCat = myCat.keys()
+print(keysCat)
+for k in myCat.keys():
+    print(k)
+# check key exist in the dic
+print('size' in myCat)
+#methode get() return a value for the given key. If key is not available, then return default value None.
+print(myCat.get('color')) # get the value of key 'color'
+print(myCat.get('disposition'))
+print(myCat.setdefault('size')) # return the value of the key
+# extract the keys of the dictionnary 
+print(myCat.keys())
+#extracr the value of the dictionnary
+print(myCat.values())
+#extract the items of the dictionnary
+print(myCat.items())
+#add an element to the dictionary
+myCat.update({'poid': '2kg'})
+print(myCat.keys())
+#creates a dictionary from given sequence of keys and values
+# keys for of the dictionary
+alphabets = {'a','b','c'}
+#the value for the dictionary
+number = 1
+dictionary = dict.fromkeys(alphabets, number)
+print(dictionary)
+# loops over each character in the message 
+# loops over each character in the message 
+message2 = '''Vous rejoindrez le département de la production de documentation
+technique, c'est-à-dire l'ensemble de données et procédures que les
+techniciens de maintenance ou pilotes utilisent pour opérer les
+hélicoptères ou pour suivre et effectuer une tâche de maintenance
+(manuel de maintenance, manuel de pièces de recharge, manuel de vol,
+etc.). Le service « sécurité de la documentation technique » dans
+lequel se déroulera le stage est en charge de la mise en place du
+système de management de la sécurité, c'est-à-dire de la mise en place
+des actions/moyens pour éviter tout risque d'incident/accident des
+hélicoptères et de blessures de personnes de la maintenance dû à une
+mauvaise compréhension/exploitation de la documentation technique.'''
+count = {}
+for character in message2.upper():
+    count.setdefault(character, 0)
+    count[character] = count[character] + 1
+print (count) 
