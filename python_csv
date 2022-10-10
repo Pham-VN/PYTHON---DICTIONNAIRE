@@ -1,0 +1,17 @@
+import csv 
+# open the file using the funtion open()
+exampleFile = open('example.csv')
+# pass it to the csv.reader()
+exampleReader = csv.reader(exampleFile)
+# if you want to access the values in the reader object is to convert it to a plain Python list by passing it to list()
+exampleData = list(exampleReader)
+# print(exampleData)
+for row in exampleData:
+    print(row)
+# print(exampleData[0][0])
+# print(exampleData[0][1])
+# print(exampleData[0][2])
+# print(exampleData[1][0])
+# print(exampleData[1][1])
+
+
